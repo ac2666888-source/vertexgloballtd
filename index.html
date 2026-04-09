@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Global Ltd | Premium Coffee, Wine & Custom Tableware</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #8c4b2e;
+            --gold: #d4af37;
+            --light: #f8f5f0;
+            --dark: #2c2c2c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        header {
+            background: linear-gradient(rgba(26,26,26,0.95), rgba(26,26,26,0.95)), url('https://source.unsplash.com/random/1920x1080/?luxury-coffee-wine') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26,26,26,0.98);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .section {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+            margin: 15px auto;
+        }
+        
+        .hero-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-text h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        
+        .btn:hover {
+            background: #6b3a23;
+            transform: translateY(-3px);
+        }
+        
+        .intro {
+            text-align: center;
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.4s;
+        }
+        
+        .card:hover {
+            transform: translateY(-15px);
+        }
+        
+        .card-content {
+            padding: 35px;
+        }
+        
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .region {
+            background: white;
+            padding: 40px;
+            border-left: 6px solid var(--gold);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+        
+        .contact-bar {
+            background: var(--primary);
+            color: white;
+            padding: 25px 5%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        footer {
+            background: #111;
+            color: #aaa;
+            padding: 80px 5% 40px;
+            text-align: center;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto 60px;
+            text-align: left;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: var(--accent);
+            color: white;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" style="font-size: 1.8rem; color: white;">VERTEX GLOBAL</div>
+            <div class="nav-links">
+                <a href="#coffee">Coffee</a>
+                <a href="#wine">Wine</a>
+                <a href="#tableware">Tableware</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header>
+        <div class="hero-text">
+            <div class="logo">VERTEX GLOBAL LTD</div>
+            <p class="tagline">Excellence in Global Sourcing • Premium Coffee • Fine Wine • Bespoke Tableware</p>
+            <h1>Bringing the World's Finest<br>to Your Table</h1>
+            <p style="font-size: 1.35rem; max-width: 700px; margin: 30px auto; opacity: 0.95;">
+                International importers and distributors of exceptional coffee, world-class wines, and custom luxury tableware.
+            </p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- About Us -->
+    <div class="section" id="about" style="background: white;">
+        <div class="intro">
+            <h2>About Vertex Global Ltd</h2>
+            <p style="max-width: 850px; margin: 0 auto; font-size: 1.2rem;">
+                Headquartered in Los Angeles, California with European operations in Liverpool, United Kingdom, 
+                Vertex Global Ltd is a premier international trading company specializing in the import and export 
+                of premium coffee, fine wines, and personalized luxury tableware and glassware.
+            </p>
+            <p style="max-width: 850px; margin: 25px auto 0; font-size: 1.15rem;">
+                With deep expertise across global supply chains, we source directly from renowned producers and estates 
+                worldwide, ensuring authenticity, quality, and sustainability. Our bespoke customization services allow 
+                clients to create unique, personalized pieces for hospitality, retail, and private collections.
+            </p>
+        </div>
+    </div>
+
+    <!-- Coffee Section -->
+    <div class="section" id="coffee" style="background: #f8f5f0;">
+        <h2>Premium Coffee Selection</h2>
+        <div class="grid">
+            <!-- Ethiopia -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Ethiopia</h3>
+                    <p>The birthplace of coffee. We source exceptional single-origin beans from the Yirgacheffe, Sidamo, and Guji regions. Known for their bright acidity, floral notes, and complex berry and citrus profiles. Many are naturally processed or washed, offering unique terroir-driven characteristics.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Yirgacheffe: Jasmine, bergamot, lemon zest</li>
+                        <li>Sidamo: Blueberry, chocolate, wine-like finish</li>
+                        <li>Guji: Tropical fruit, honey, silky body</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Colombia -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Colombia</h3>
+                    <p>World-renowned for balanced, sweet coffees with medium acidity and full body. Our selections from Huila, Antioquia, and Nariño offer caramel sweetness, nutty undertones, and clean, lingering finishes. Many farms practice shade-grown and organic methods.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Huila: Brown sugar, red apple, creamy mouthfeel</li>
+                        <li>Antioquia: Milk chocolate, almond, balanced acidity</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Brazil -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Brazil</h3>
+                    <p>The world's largest coffee producer. We offer premium Brazilian coffees from Minas Gerais and São Paulo regions, featuring smooth, chocolatey profiles with low acidity and nutty sweetness. Ideal for espresso blends and everyday enjoyment.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Minas Gerais: Dark chocolate, hazelnut, full body</li>
+                        <li>Santos: Mild, sweet, with toasted almond notes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Kenya -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Kenya</h3>
+                    <p>Iconic for its vibrant, wine-like acidity and intense fruit flavors. Our AA and AB grade coffees from the Central and Rift Valley regions deliver bold blackcurrant, tomato, and citrus notes with exceptional clarity and complexity.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 70px; text-align: center;">
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+                We also source specialty coffees from Guatemala (Antigua), Costa Rica (Tarrazú), Indonesia (Sumatra Mandheling), and Jamaica (Blue Mountain) upon request. All beans are freshly roasted to order or supplied green for roasters.
+            </p>
+        </div>
+    </div>
+
+    <!-- Wine Section -->
+    <div class="section" id="wine" style="background: white;">
+        <h2>Fine Wine Collection</h2>
+        <div class="grid">
+            <!-- France -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>France</h3>
+                    <p>Home to some of the world's most prestigious wines. We work with renowned estates in Bordeaux, Burgundy, Rhône Valley, and Champagne.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li><strong>Bordeaux:</strong> Classified Growths from Médoc, Saint-Émilion, and Pomerol – rich, age-worthy reds</li>
+                        <li><strong>Burgundy:</strong> Premier and Grand Cru Pinot Noir & Chardonnay from Côte de Nuits and Côte de Beaune</li>
+                        <li><strong>Champagne:</strong> Prestigious houses and grower-producers offering elegant sparkling wines</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Italy -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Italy</h3>
+                    <p>From the rolling hills of Tuscany to the volcanic soils of Sicily, we offer exceptional Italian wines.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li><strong>Tuscany:</strong> Brunello di Montalcino, Chianti Classico Riserva, Super Tuscans</li>
+                        <li><strong>Piedmont:</strong> Barolo and Barbaresco – powerful Nebbiolo-based reds</li>
+                        <li><strong>Veneto & Sicily:</strong> Amarone, Valpolicella, and elegant Nero d'Avola</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Spain -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Spain</h3>
+                    <p>Renowned for bold reds and world-class sparkling wines. We source from Rioja, Ribera del Duero, Priorat, and Penedès.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li><strong>Rioja:</strong> Tempranillo Reserva and Gran Reserva with elegant oak integration</li>
+                        <li><strong>Ribera del Duero:</strong> Powerful, structured reds from Tinto Fino</li>
+                        <li><strong>Cava:</strong> Traditional method sparkling wines offering excellent value</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- New World -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>New World Highlights</h3>
+                    <p>We also curate exceptional wines from:</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li><strong>Napa & Sonoma Valley (USA):</strong> Cabernet Sauvignon, Chardonnay, and cult wines</li>
+                        <li><strong>Margaret River & Barossa Valley (Australia):</strong> Bold Shiraz and elegant Cabernet</li>
+                        <li><strong>Central Otago & Marlborough (New Zealand):</strong> World-class Pinot Noir and Sauvignon Blanc</li>
+                        <li><strong>Mendoza (Argentina):</strong> Malbec with intense fruit and structure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableware Section -->
+    <div class="section" id="tableware" style="background: #f8f5f0;">
+        <h2>Bespoke Tableware & Glassware</h2>
+        <p class="intro" style="text-align: left; max-width: 1000px;">
+            Vertex Global Ltd offers complete customization services for luxury tableware, dinnerware, flatware, and glassware. 
+            Whether for high-end restaurants, hotels, private estates, or corporate gifting, we can create pieces with custom logos, 
+            monograms, colors, shapes, and materials to your exact specifications.
+        </p>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Porcelain & Ceramic</h3>
+                    <p>Fine bone china and premium porcelain from renowned manufacturers. Custom designs, gold/silver banding, and intricate patterns available. Perfect for fine dining establishments and luxury retail.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Crystal & Glassware</h3>
+                    <p>Hand-blown crystal stemware, decanters, and barware from Europe’s finest glasshouses. Personalization options include deep etching, engraving, and custom color tints.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sterling Silver & Flatware</h3>
+                    <p>Exquisite sterling silver cutlery and serving pieces. We offer both classic and contemporary designs with the option for custom engraving and monogramming.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 60px; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+            <h3 style="text-align: center; margin-bottom: 30px;">Customization Capabilities</h3>
+            <ul style="max-width: 900px; margin: 0 auto; font-size: 1.15rem; column-count: 2; column-gap: 60px;">
+                <li>Company logos and crests</li>
+                <li>Personal monograms and initials</li>
+                <li>Custom shapes and sizes</li>
+                <li>Special color glazes and finishes</li>
+                <li>Gold, platinum, and silver detailing</li>
+                <li>Private labeling and packaging</li>
+                <li>Volume production for hospitality groups</li>
+                <li>Small-batch exclusive collections</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="contact-bar">
+        <p><strong>Vertex Global Ltd</strong></p>
+        <p>Head Office: Los Angeles, California, USA</p>
+        <p>European Branch: Liverpool, United Kingdom</p>
+        <p style="margin-top: 15px; font-size: 1.4rem;">
+            Phone (UK): <strong>+44 7537 168400</strong> | <strong>+44 7537 180058</strong>
+        </p>
+        <p style="margin-top: 20px; opacity: 0.9;">
+            We welcome inquiries from importers, distributors, hospitality groups, and private clients worldwide.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4 style="color: var(--gold); margin-bottom: 15px;">Vertex Global Ltd</h4>
+                <p>International Trade in Premium Beverages & Luxury Goods</p>
+                <p style="margin-top: 20px;">Headquartered in Los Angeles • Operations in Liverpool, UK</p>
+            </div>
+            <div>
+                <h4 style="color: var(--gold); margin-bottom: 15px;">Our Expertise</h4>
+                <p>Coffee Sourcing<br>Fine Wine Import<br>Bespoke Tableware Design & Production<br>Global Logistics & Compliance</p>
+            </div>
+            <div>
+                <h4 style="color: var(--gold); margin-bottom: 15px;">Services</h4>
+                <p>Bulk & Specialty Import/Export<br>Private Label Development<br>Customization & Personalization<br>Supply Chain Management</p>
+            </div>
+        </div>
+        <p style="opacity: 0.6; font-size: 0.95rem;">© 2026 Vertex Global Ltd. All rights reserved. | Professional Import & Export Services</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add active class to nav on scroll (optional enhancement)
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(26,26,26,0.99)';
+            } else {
+                nav.style.background = 'rgba(26,26,26,0.98)';
+            }
+        });
+    </script>
+</body>
+</html>
